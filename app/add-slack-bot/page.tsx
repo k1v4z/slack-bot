@@ -1,5 +1,6 @@
-import { useSearchParams } from 'next/navigation'
+"use client"
 import React from 'react'
+import { useSearchParams } from 'next/navigation'
 
 const Authorization = () => {
     const code = useSearchParams().get('code')
