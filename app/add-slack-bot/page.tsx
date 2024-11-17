@@ -7,7 +7,7 @@ const Authorization = () => {
      
   return (
     <div>
-        {code}
+        Your slack code: {code}
     </div>
   )
 }
