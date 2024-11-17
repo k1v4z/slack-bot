@@ -8,7 +8,9 @@ const Authorization = () => {
   return (
     <div>
         <Suspense>
-            Your code: {code}
+            <div>
+                {code ? 'Authorized' : 'Not Authorized'}
+            </div>
         </Suspense>
     </div>
   )
