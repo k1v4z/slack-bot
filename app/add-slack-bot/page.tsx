@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 
 const Authorization = () => {
@@ -7,7 +7,9 @@ const Authorization = () => {
      
   return (
     <div>
-        Your slack code: {code}
+        <Suspense>
+            Your code: {code}
+        </Suspense>
     </div>
   )
 }
