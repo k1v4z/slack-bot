@@ -1,19 +1,18 @@
-"use client"
-import React, { Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
+"use client";
+import React, { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 
-const Authorization = () => {
-    const code = useSearchParams().get('code')
-     
-  return (
-    <div>
-        <Suspense>
-            <div>
-                {code ? 'Authorized' : 'Not Authorized'}
-            </div>
-        </Suspense>
-    </div>
-  )
+function Search() {
+  const code = useSearchParams().get("code");
+
+  return <div>Your code: {code}</div>;
 }
+const Authorization = () => {
+  return (
+    <Suspense>
+      <Search />
+    </Suspense>
+  );
+};
 
-export default Authorization
+export default Authorization;
